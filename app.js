@@ -81,8 +81,8 @@ window.onload = function () {
         },
         {
             id: 13,
-            nombre: 'Promo 1 pizza de muzzarella + 1 docena de empanadas',
-            precio: 1000,
+            nombre: 'Promo 1/2 de Empanadas',
+            precio: 250,
             imagen: './img/empanada-1.jpg'
         },
         {
@@ -95,7 +95,7 @@ window.onload = function () {
             id: 15,
             nombre: 'Promo 2 docenas de empanadas',
             precio: 1400,
-            imagen: './img/pizza-10.jpg'
+            imagen: './img/empanada-1.jpg'
         }
 
     ];
@@ -186,7 +186,7 @@ window.onload = function () {
             // Creamos el nodo del item del carrito
             const miNodo = document.createElement('li');
             miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-            miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}$`;
+            miNodo.textContent = ` ${numeroUnidadesItem} x ${miItem[0].nombre} - $${miItem[0].precio}`;
             // Boton de borrar
             const miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-5');
@@ -198,6 +198,7 @@ window.onload = function () {
             // Mezclamos nodos
             miNodo.appendChild(miBoton);
             DOMcarrito.appendChild(miNodo);
+
         });
     }
 
