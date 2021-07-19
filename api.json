@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "nombre": "Julia",
+        "profesion": "Pizzera",
+        "imagen": "./img/chef-2.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Manuel",
+        "profesion": "Pizzero",
+        "imagen": "./img/chef-1.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Samanta",
+        "profesion": "Cajera",
+        "imagen": "./img/chef-4.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Lionel",
+        "profesion": "Ayudante de cocina",
+        "imagen": "./img/chef-3.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Carlos",
+        "profesion": "Ayudante de cocina",
+        "imagen": "./img/chef-5.jpg"
+    }
+
+]

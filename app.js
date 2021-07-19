@@ -3,7 +3,6 @@ $( document ).ready(function()
 console.log( "El DOM esta listo" );
 });
 
-
 window.onload = function () {
     // Variables
     const baseDeDatos = [
@@ -58,25 +57,25 @@ window.onload = function () {
         {
             id: 9,
             nombre: 'Empanada de Carne',
-            precio: 70,
+            precio: 70.50,
             imagen: './img/empanada-1.jpg'
         },
         {
             id: 10,
             nombre: 'Empanada de Jamon y Queso',
-            precio: 75,
+            precio: 75.50,
             imagen: './img/empanada-1.jpg'
         },
         {
             id: 11,
             nombre: 'Empanada de Pollo',
-            precio: 75,
+            precio: 75.50,
             imagen: './img/empanada-1.jpg'
         },
         {
             id: 12,
             nombre: 'Empanada de Humita',
-            precio: 75,
+            precio: 75.50,
             imagen: './img/empanada-1.jpg'
         },
         {
@@ -279,7 +278,9 @@ window.onload = function () {
     // Evento del boton comprar
 
 
-    $(DOMbotonComprar).click(e=>{
+
+
+    $(DOMbotonComprar).click(e =>{
         let modal = document.createElement('div');
         modal.classList.add('modal-1');
         modal.innerHTML = ` 
@@ -312,11 +313,12 @@ window.onload = function () {
     })
 
 
+
+
     
     // Eventos
     DOMbotonVaciar.addEventListener('click', vaciarCarrito);
     DOMbotonVaciar.addEventListener('click',borrarBadge);
-
 
     // Inicio
     cargarCarritoDeLocalStorage();
