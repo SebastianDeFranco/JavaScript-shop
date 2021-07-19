@@ -152,7 +152,6 @@ window.onload = function () {
     * Evento para añadir un producto al carrito de la compra
     */
     function anyadirProductoAlCarrito(evento) {
-        // Anyadimos el Nodo a nuestro carrito
         carrito.push(evento.target.getAttribute('marcador'))
         // Calculo el total
         calcularTotal();
@@ -166,20 +165,17 @@ window.onload = function () {
 
 
     function renderizarCarrito() {
-        // Vaciamos todo el html
         DOMcarrito.textContent = '';
         // Quitamos los duplicados
         const carritoSinDuplicados = [...new Set(carrito)];
-        // Generamos los Nodos a partir de carrito
+
         carritoSinDuplicados.forEach((item) => {
             // Obtenemos el item que necesitamos de la variable base de datos
             const miItem = baseDeDatos.filter((itemBaseDatos) => {
-                // ¿Coincide las id? Solo puede existir un caso
                 return itemBaseDatos.id === parseInt(item);
             });
             // Cuenta el número de veces que se repite el producto
             const numeroUnidadesItem = carrito.reduce((total, itemId) => {
-                // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
                 return itemId === item ? total += 1 : total;
             }, 0);
             // Creamos el nodo del item del carrito
@@ -194,7 +190,7 @@ window.onload = function () {
             miBoton.dataset.item = item;
             miBoton.addEventListener('click', borrarItemCarrito);
             miBoton.addEventListener('click', borrarBadge);
-            // Mezclamos nodos
+
             miNodo.appendChild(miBoton);
             DOMcarrito.appendChild(miNodo);
 
@@ -211,18 +207,14 @@ window.onload = function () {
         carrito = carrito.filter((carritoId) => {
             return carritoId !== id;
         });
-        // volvemos a renderizar
+
         renderizarCarrito();
         // Calculamos de nuevo el precio
         calcularTotal();
-        // Actualizamos el LocalStorage
         guardarCarritoEnLocalStorage();
 
     }
 
-    /**
-    * Calcula el precio total teniendo en cuenta los productos repetidos
-    */
     function calcularTotal() {
         // Limpiamos precio anterior
         total = 0;
@@ -234,7 +226,6 @@ window.onload = function () {
             });
             total = total + miItem[0].precio;
         });
-        // Renderizamos el precio en el HTML
         DOMtotal.textContent = total.toFixed(2);
     }
 
@@ -244,7 +235,6 @@ window.onload = function () {
     function vaciarCarrito() {
         // Limpiamos los productos guardados
         carrito = [];
-        // Renderizamos los cambios
         renderizarCarrito();
         calcularTotal();
         // Borra LocalStorage
@@ -258,7 +248,6 @@ window.onload = function () {
     }
 
     function cargarCarritoDeLocalStorage () {
-        // ¿Existe un carrito previo guardado en LocalStorage?
         if (miLocalStorage.getItem('carrito') !== null) {
             // Carga la información
             carrito = JSON.parse(miLocalStorage.getItem('carrito'));
@@ -275,10 +264,7 @@ window.onload = function () {
             spanCarrito.classList.remove('icon-button__badge')
     }
 
-    // Evento del boton comprar
-
-
-
+    // Creamos un Modal a partir del click en el boton comprar
 
     $(DOMbotonComprar).click(e =>{
         let modal = document.createElement('div');
