@@ -262,7 +262,6 @@ window.onload = function () {
         if (miLocalStorage.getItem('carrito') !== null) {
             // Carga la información
             carrito = JSON.parse(miLocalStorage.getItem('carrito'));
-            modal();
         }
     }
 
@@ -278,7 +277,7 @@ window.onload = function () {
 
     // Evento del boton comprar
 
-function modal(){
+
     $(DOMbotonComprar).click(e=>{
         let modal = document.createElement('div');
         modal.classList.add('modal-1');
@@ -310,7 +309,7 @@ function modal(){
         vaciarCarrito();
         borrarBadge();
     })
-}
+
 
     
     // Eventos
