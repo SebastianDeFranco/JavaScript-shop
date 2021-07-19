@@ -54,16 +54,6 @@
 }
 
 
-@keyframes show-message{
-    0%{
-        visibility: hidden;
-        opacity: 0;
-    }
-    100%{
-        visibility: visible;
-        opacity: 1;
-    }
-}
 .parrafo-principal{
     text-align: center;
     font-size: 24px;
@@ -81,6 +71,10 @@
     background-color: #f8a840;
     justify-content: center;
 }
+
+
+/* medias */
+
 
 @media(max-width:1024px){
     .div-color{
@@ -147,6 +141,8 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+/* Footer */
 
 .footer{
     display: flex;
