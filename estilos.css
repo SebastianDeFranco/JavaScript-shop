@@ -1,0 +1,217 @@
+.body{
+    font-family: 'Indie Flower', cursive;
+}
+
+.div-carrito{
+    width: 500px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.modal-1{
+    font-size: 18px;
+    color: rgb(253, 58, 24);
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.icon-button__badge{
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(255, 123, 0);
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+
+}
+.titulo-principal{
+    text-align: center;
+    font-size: 70px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+.titulo-formulario{
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+}
+
+.body-form{
+    background-color: rgb(90, 90, 90);
+}
+
+.contact-form > *{
+    padding: 0.5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 50%;
+}
+.boton-comprar{
+    background-color: rgb(233, 172, 60);
+    color: #fff;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form-response{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form [required]:valid{
+    border: thin solid rgb(6, 245, 6);
+}
+
+.contact-form [required]:invalid{
+    border: thin solid rgb(245, 6, 6);
+}
+
+.contact-form-error{
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: rgb(245, 6, 6);
+    color: #fff;
+    transition: all 800ms ease;
+}
+
+.contact-form-error.is-active{
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+    display: none;
+}
+
+@keyframes show-message{
+    0%{
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.parrafo-principal{
+    text-align: center;
+    font-size: 24px;
+}
+
+.titulo-secundario{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.div-color{
+    height: 30vh;
+    background-color: #f8a840;
+    justify-content: center;
+}
+
+@media(max-width:1024px){
+    .div-color{
+        height: 18vh;
+    }
+}
+@media(max-width:550px){
+    .div-color{
+        height: 30vh;
+    }
+}
+
+@media(max-width:420px){
+    .div-carrito{
+        width: 40vh;
+    }
+    .div-color{
+        height: 300px;
+    }
+}
+@media(max-width:300px){
+    .div-carrito{
+        width: 200px;
+    }
+    .div-color{
+        height: 45vh;
+    }
+}
+#logo-pizza{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.cursor-1{
+    cursor: pointer;
+
+}
+
+
+.flex-carrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.footer p{
+    padding: 10px;
+    font-size: 30px;
+}
+
+.fa {
+    
+    padding: 20px;
+    font-size: 20px;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+.fa:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
